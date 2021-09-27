@@ -1,5 +1,5 @@
 """
-This is from the Python Cookbook, 3rd Edition
+This was heavily inspired from the Python Cookbook, 3rd Edition
 David Beazley & Brian K. Jones
 """
 import re
