@@ -3,6 +3,7 @@ This is from the Python Cookbook, 3rd Edition
 David Beazley & Brian K. Jones
 """
 import re
+import sys
 import collections
 
 # Token Specification
@@ -100,3 +101,14 @@ class ExpressionEvaluator:
             return exprval
         else:
             raise SyntaxError('Expected Number or LPAREN')
+
+if __name__ == "__main__":
+    if(len(sys.argv) < 2):
+        print("interesting")
+    else:
+        e = ExpressionEvaluator()
+        name = sys.argv[1]
+        openfile = open(name, 'r')
+        data = openfile.read()
+        openfile.close()
+        print(e.parse(data))
